@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Light grey background for the page */
+}
+
+#gameContainer { /* Will wrap the canvas and UI elements */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    background-color: #ffffff; /* White background for the game area */
+    border-radius: 8px;
+}
+
+canvas { /* The Three.js renderer's canvas */
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    /* Dimensions are set by Three.js, so no width/height here */
+}
+
+#uiControls {
+    display: flex;
+    justify-content: space-around; /* Distribute buttons evenly */
+    width: 100%; /* Make UI controls take full width of gameContainer */
+    margin-top: 15px; /* Space above buttons */
+    margin-bottom: 10px; /* Space below buttons */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff; /* Bootstrap primary blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Add some horizontal margin between buttons */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#startButton {
+    background-color: #28a745; /* Green for start */
+}
+
+#startButton:hover {
+    background-color: #1e7e34; /* Darker green */
+}
+
+#pauseButton {
+    background-color: #ffc107; /* Yellow for pause */
+    color: #212529; /* Dark text for yellow button */
+}
+
+#pauseButton:hover {
+    background-color: #d39e00; /* Darker yellow */
+}
+
+#scoreDisplay {
+    font-size: 24px;
+    color: #333;
+    margin-top: 15px;
+    font-weight: bold;
+}
